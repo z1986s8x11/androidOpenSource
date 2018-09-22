@@ -6,10 +6,11 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.zhusx.opensource"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
 
     signingConfigs {
@@ -93,4 +94,18 @@ dependencies {
     //刷新 加载更多RecyclerView
     implementation 'com.github.jdsjlzx:LRecyclerView:1.5.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    //贝塞尔圆点指示器
+    implementation('com.github.yanyiqun001:bannerDot:1.0') {
+        exclude group: 'com.android.support'
+    }
+
+    //进度条
+    implementation 'org.adw.library:discrete-seekbar:1.0.1'
+    //右测A-Z选择
+    implementation 'com.gjiazhe:wavesidebar:1.3'
+
+    //二维码
+    implementation 'com.king.zxing:zxing-lite:1.0.2'
+    implementation 'com.google.zxing:core:3.3.0'
 }

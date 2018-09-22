@@ -33,5 +33,9 @@
         <activity android:name=".image.PhotoViewActivity" />
         <activity android:name=".progress.AVLoadingActivity" />
         <activity android:name=".camera.PictureSelectorActivity" />
+        <activity android:name=".selector.BannerDotActivity" />
+        <activity android:name=".selector.DiscreteSeekBarActivity" />
+        <activity android:name=".selector.WaveSideBarActivity" />
+        <activity android:name=".camera.ZXingActivity" />
     </application>
 </manifest>

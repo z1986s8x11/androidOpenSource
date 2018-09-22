@@ -5,10 +5,14 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.zhusx.core.imp.SimpleRecyclerAdapter
 import com.zhusx.opensource.camera.PictureSelectorActivity
+import com.zhusx.opensource.camera.ZXingActivity
 import com.zhusx.opensource.image.FrescoPhotoViewActivity
 import com.zhusx.opensource.image.PhotoViewActivity
 import com.zhusx.opensource.list.LRecyclerViewActivity
 import com.zhusx.opensource.progress.AVLoadingActivity
+import com.zhusx.opensource.selector.BannerDotActivity
+import com.zhusx.opensource.selector.DiscreteSeekBarActivity
+import com.zhusx.opensource.selector.WaveSideBarActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -27,7 +31,11 @@ class MainActivity : AppCompatActivity() {
                         PhotoViewActivity::class.java,
                         LRecyclerViewActivity::class.java,
                         AVLoadingActivity::class.java,
-                        PictureSelectorActivity::class.java
+                        PictureSelectorActivity::class.java,
+                        BannerDotActivity::class.java,
+                        DiscreteSeekBarActivity::class.java,
+                        WaveSideBarActivity::class.java,
+                        ZXingActivity::class.java
                 )) {
             override fun bindViewHolder(holder: _ViewHolder, p1: Int, s: Class<out AppCompatActivity>) {
                 holder.run {

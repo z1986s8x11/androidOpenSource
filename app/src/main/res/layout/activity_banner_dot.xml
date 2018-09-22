@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/lib_bg_red"
+        android:paddingBottom="10dp">
+
+        <!--selectedRaduis：起始圆半径-->
+        <!--unSelectedRaduis：背景圆半径-->
+        <!--selectedColor：起始圆颜色-->
+        <!--unSelectedColor：背景圆颜色-->
+        <!--spacing：间距-->
+
+        <com.dotlibrary.BezierBannerDot
+            android:id="@+id/banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            app:selectedColor="@android:color/holo_blue_light"
+            app:selectedRaduis="5dp"
+            app:spacing="10dp"
+            app:unSelectedColor="@android:color/holo_green_light"
+            app:unSelectedRaduis="5dp" />
+    </FrameLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

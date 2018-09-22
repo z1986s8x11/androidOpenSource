@@ -30,7 +30,7 @@ class PictureSelectorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_picture_selector)
         tv_selector.setOnClickListener {
-            AlertDialog.Builder(it.context).setItems(arrayOf("相册", "拍摄"), { dialog, which ->
+            AlertDialog.Builder(it.context).setItems(arrayOf("相册", "拍摄"), { _, which ->
                 when (which) {
                     0 -> {
                         PictureSelector.create(this@PictureSelectorActivity)
