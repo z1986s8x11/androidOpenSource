@@ -15,6 +15,7 @@ public class AppApplication extends Application {
     public void onCreate() {
         super.onCreate();
         ZsxApplicationManager.builder(this).setLogDebug(BuildConfig.DEBUG).build();
+        //初始化fresco框架
         Fresco.initialize(this);
     }
 }
