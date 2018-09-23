@@ -13,6 +13,8 @@ import com.zhusx.opensource.progress.AVLoadingActivity
 import com.zhusx.opensource.selector.BannerDotActivity
 import com.zhusx.opensource.selector.DiscreteSeekBarActivity
 import com.zhusx.opensource.selector.WaveSideBarActivity
+import com.zhusx.opensource.text.RollingTextActivity
+import com.zhusx.opensource.verify.PatternLockerActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -35,7 +37,10 @@ class MainActivity : AppCompatActivity() {
                         BannerDotActivity::class.java,
                         DiscreteSeekBarActivity::class.java,
                         WaveSideBarActivity::class.java,
-                        ZXingActivity::class.java
+                        ZXingActivity::class.java,
+                        RollingTextActivity::class.java,
+                        PatternLockerActivity::class.java
+
                 )) {
             override fun bindViewHolder(holder: _ViewHolder, p1: Int, s: Class<out AppCompatActivity>) {
                 holder.run {

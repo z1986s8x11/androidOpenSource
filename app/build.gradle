@@ -108,4 +108,17 @@ dependencies {
     //二维码
     implementation 'com.king.zxing:zxing-lite:1.0.2'
     implementation 'com.google.zxing:core:3.3.0'
+
+    //滚动的数字
+    implementation('com.github.YvesCheung:RollingText:1.2.0') {
+        exclude group: 'org.jetbrains.kotlin'
+    }
+
+    //图形解锁
+    implementation 'com.github.ihsg:PatternLocker:2.1.0'
+
+    //基于behavior的缩放
+    implementation('com.github.todou:appbarspring:1.0.7') {
+        exclude group: 'com.android.support'
+    }
 }

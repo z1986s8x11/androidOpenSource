@@ -4,6 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:entries="@android:array/phoneTypes" />
+
     <com.gjiazhe.wavesidebar.WaveSideBar
         android:id="@+id/side_bar"
         android:layout_width="wrap_content"
@@ -16,9 +21,4 @@
         app:sidebar_text_alignment="center"
         app:sidebar_text_color="#8D6E63"
         app:sidebar_text_size="14sp" />
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:entries="@android:array/phoneTypes" />
 </FrameLayout>

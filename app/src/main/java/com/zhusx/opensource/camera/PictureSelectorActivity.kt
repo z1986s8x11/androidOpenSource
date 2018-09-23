@@ -40,6 +40,7 @@ class PictureSelectorActivity : AppCompatActivity() {
                     1 -> {
                         PictureSelector.create(this@PictureSelectorActivity)
                                 .openGallery(PictureMimeType.ofImage())
+                                .isCamera(true)
                                 .forResult(PictureConfig.CHOOSE_REQUEST)
                     }
                     2 -> {
