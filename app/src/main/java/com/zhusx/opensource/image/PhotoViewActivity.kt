@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.activity_gilde.*
 class PhotoViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_gilde)
+        setContentView(R.layout.activity_photoview_glide)
         Glide.with(this).load(TestData.Images[0]).into(iv_image)
     }
 }
