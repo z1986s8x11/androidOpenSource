@@ -117,12 +117,9 @@ dependencies {
     //图形解锁
     implementation 'com.github.ihsg:PatternLocker:2.1.0'
 
-    //基于behavior的缩放
-    implementation('com.github.todou:appbarspring:1.0.7') {
+    //基于ViewPager的Tab选择器
+    implementation('com.github.hackware1993:MagicIndicator:1.5.0') {
         exclude group: 'com.android.support'
     }
 
-    implementation ('com.github.hackware1993:MagicIndicator:1.5.0'){
-        exclude group: 'com.android.support'
-    }
 }

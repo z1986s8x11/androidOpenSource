@@ -8,7 +8,7 @@ import com.zhusx.opensource.TestData
 import kotlinx.android.synthetic.main.activity_gilde.*
 
 /**
- *
+ * https://github.com/chrisbanes/PhotoView/tree/master
  * Author  zhusx
  * Email   327270607@qq.com
  * Create  2018/8/16 15:28

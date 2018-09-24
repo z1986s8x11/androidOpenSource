@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity() {
                         PatternLockerActivity::class.java,
                         GlideActivity::class.java,
                         MagicIndicatorActivity::class.java
-
                 )) {
             override fun bindViewHolder(holder: _ViewHolder, p1: Int, s: Class<out AppCompatActivity>) {
                 holder.run {

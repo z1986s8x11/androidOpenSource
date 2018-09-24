@@ -4,16 +4,16 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.RecyclerView
-import com.github.jdsjlzx.recyclerview.ProgressStyle
-import kotlinx.android.synthetic.main.activity_lrecyclerview.*
 import com.github.jdsjlzx.ItemDecoration.DividerDecoration
 import com.github.jdsjlzx.recyclerview.LRecyclerViewAdapter
+import com.github.jdsjlzx.recyclerview.ProgressStyle
 import com.zhusx.core.imp.SimpleRecyclerAdapter
 import com.zhusx.opensource.R
+import kotlinx.android.synthetic.main.activity_lrecyclerview.*
 
 
 /**
- *
+ * https://github.com/jdsjlzx/LRecyclerView
  * Author  zhusx
  * Email   327270607@qq.com
  * Create  2018/8/16 16:11
@@ -45,8 +45,7 @@ class LRecyclerViewActivity : AppCompatActivity() {
         recyclerView.setOnLoadMoreListener {
             handler.postDelayed(runnable, 3000)
         }
-        recyclerView.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader)
-        recyclerView.setRefreshProgressStyle(ProgressStyle.LineSpinFadeLoader)
+        recyclerView.setRefreshProgressStyle(ProgressStyle.BallPulse)
         recyclerView.setLoadingMoreProgressStyle(ProgressStyle.BallSpinFadeLoader)
 
         //recyclerView.setLoadMoreEnabled(false)
