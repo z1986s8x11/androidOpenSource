@@ -39,5 +39,7 @@
         <activity android:name=".camera.ZXingActivity" />
         <activity android:name=".text.RollingTextActivity" />
         <activity android:name=".verify.PatternLockerActivity" />
+        <activity android:name=".image.GlideActivity" />
+        <activity android:name=".selector.MagicIndicatorActivity" />
     </application>
 </manifest>

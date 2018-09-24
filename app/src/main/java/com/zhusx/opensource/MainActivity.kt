@@ -7,11 +7,13 @@ import com.zhusx.core.imp.SimpleRecyclerAdapter
 import com.zhusx.opensource.camera.PictureSelectorActivity
 import com.zhusx.opensource.camera.ZXingActivity
 import com.zhusx.opensource.image.FrescoPhotoViewActivity
+import com.zhusx.opensource.image.GlideActivity
 import com.zhusx.opensource.image.PhotoViewActivity
 import com.zhusx.opensource.list.LRecyclerViewActivity
 import com.zhusx.opensource.progress.AVLoadingActivity
 import com.zhusx.opensource.selector.BannerDotActivity
 import com.zhusx.opensource.selector.DiscreteSeekBarActivity
+import com.zhusx.opensource.selector.MagicIndicatorActivity
 import com.zhusx.opensource.selector.WaveSideBarActivity
 import com.zhusx.opensource.text.RollingTextActivity
 import com.zhusx.opensource.verify.PatternLockerActivity
@@ -39,7 +41,9 @@ class MainActivity : AppCompatActivity() {
                         WaveSideBarActivity::class.java,
                         ZXingActivity::class.java,
                         RollingTextActivity::class.java,
-                        PatternLockerActivity::class.java
+                        PatternLockerActivity::class.java,
+                        GlideActivity::class.java,
+                        MagicIndicatorActivity::class.java
 
                 )) {
             override fun bindViewHolder(holder: _ViewHolder, p1: Int, s: Class<out AppCompatActivity>) {
