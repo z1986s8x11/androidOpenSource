@@ -10,6 +10,7 @@ import com.zhusx.opensource.image.FrescoPhotoViewActivity
 import com.zhusx.opensource.image.GlideActivity
 import com.zhusx.opensource.image.PhotoViewActivity
 import com.zhusx.opensource.list.LRecyclerViewActivity
+import com.zhusx.opensource.list.SmartRefreshLayoutActivity
 import com.zhusx.opensource.progress.AVLoadingActivity
 import com.zhusx.opensource.selector.BannerDotActivity
 import com.zhusx.opensource.selector.DiscreteSeekBarActivity
@@ -43,7 +44,8 @@ class MainActivity : AppCompatActivity() {
                         RollingTextActivity::class.java,
                         PatternLockerActivity::class.java,
                         GlideActivity::class.java,
-                        MagicIndicatorActivity::class.java
+                        MagicIndicatorActivity::class.java,
+                        SmartRefreshLayoutActivity::class.java
                 )) {
             override fun bindViewHolder(holder: _ViewHolder, p1: Int, s: Class<out AppCompatActivity>) {
                 holder.run {

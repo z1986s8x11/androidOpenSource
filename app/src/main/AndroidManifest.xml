@@ -41,5 +41,6 @@
         <activity android:name=".verify.PatternLockerActivity" />
         <activity android:name=".image.GlideActivity" />
         <activity android:name=".selector.MagicIndicatorActivity" />
+        <activity android:name=".list.SmartRefreshLayoutActivity" />
     </application>
 </manifest>
