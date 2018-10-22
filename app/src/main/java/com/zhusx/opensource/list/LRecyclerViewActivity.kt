@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView
 import com.github.jdsjlzx.ItemDecoration.DividerDecoration
 import com.github.jdsjlzx.recyclerview.LRecyclerViewAdapter
 import com.github.jdsjlzx.recyclerview.ProgressStyle
-import com.zhusx.core.imp.SimpleRecyclerAdapter
+import com.zhusx.core.adapter._BaseRecyclerAdapter
 import com.zhusx.opensource.R
 import kotlinx.android.synthetic.main.activity_lrecyclerview.*
 
@@ -23,13 +23,13 @@ class LRecyclerViewActivity : AppCompatActivity() {
     private val runnable: Runnable = Runnable {
         recyclerView.refreshComplete(10)
     }
-    lateinit var adapter: SimpleRecyclerAdapter<String>
+    lateinit var adapter: _BaseRecyclerAdapter<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lrecyclerview)
-        adapter = object : SimpleRecyclerAdapter<String>(android.R.layout.simple_list_item_1, (0..10).map { "$it" }) {
-            override fun bindViewHolder(holder: _ViewHolder, p1: Int, s: String?) {
+        adapter = object : _BaseRecyclerAdapter<String>(android.R.layout.simple_list_item_1, (0..10).map { "$it" }) {
+            override fun bindViewHolder(holder: _BaseRecyclerAdapter._ViewHolder, p1: Int, s: String?) {
                 holder.setText(android.R.id.text1, s)
             }
         }

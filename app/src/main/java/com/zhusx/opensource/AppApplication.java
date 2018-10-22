@@ -5,6 +5,9 @@ import android.app.Application;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.zhusx.core.ZsxApplicationManager;
 
+import io.realm.Realm;
+import io.realm.RealmConfiguration;
+
 /**
  * Author  zhusx
  * Email   327270607@qq.com

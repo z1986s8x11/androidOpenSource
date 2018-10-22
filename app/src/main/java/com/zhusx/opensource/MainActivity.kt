@@ -3,7 +3,7 @@ package com.zhusx.opensource
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.zhusx.core.imp.SimpleRecyclerAdapter
+import com.zhusx.core.adapter._BaseRecyclerAdapter
 import com.zhusx.opensource.camera.PictureSelectorActivity
 import com.zhusx.opensource.camera.ZXingActivity
 import com.zhusx.opensource.image.FrescoPhotoViewActivity
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        recyclerView.adapter = object : SimpleRecyclerAdapter<Class<out AppCompatActivity>>(R.layout.lib_list_item_1,
+        recyclerView.adapter = object : _BaseRecyclerAdapter<Class<out AppCompatActivity>>(R.layout.lib_list_item_1,
                 arrayListOf(
                         FrescoPhotoViewActivity::class.java,
                         PhotoViewActivity::class.java,
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
                         MagicIndicatorActivity::class.java,
                         SmartRefreshLayoutActivity::class.java
                 )) {
-            override fun bindViewHolder(holder: _ViewHolder, p1: Int, s: Class<out AppCompatActivity>) {
+            override fun bindViewHolder(holder: _BaseRecyclerAdapter._ViewHolder, p1: Int, s: Class<out AppCompatActivity>) {
                 holder.run {
                     setText(android.R.id.text1, s.simpleName)
                     rootView.setOnClickListener {
