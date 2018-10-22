@@ -1,11 +1,15 @@
 package com.zhusx.opensource.image
 
+import android.graphics.Bitmap
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
+import com.bumptech.glide.request.target.SimpleTarget
+import com.bumptech.glide.request.transition.Transition
 import com.zhusx.core.utils._Views
 import com.zhusx.opensource.R
 import com.zhusx.opensource.TestData
@@ -26,10 +30,21 @@ class GlideActivity : AppCompatActivity() {
                         .diskCacheStrategy(DiskCacheStrategy.NONE)
                         .skipMemoryCache(true))
                 .into(iv_image)
-
+        Glide.with(iv_image)
         Glide.with(this).load(TestData.Images[0])
                 .apply(RequestOptions.bitmapTransform(RoundedCorners(_Views.dip2px(10f)))
                         .override(300, 300))
                 .into(iv_image1)
+    }
+
+    fun downloadBitmap() {
+        Glide.with(this).asBitmap().load("").into(object : SimpleTarget<Bitmap>() {
+            override fun onResourceReady(resource: Bitmap, transition: Transition<in Bitmap>?) {
+
+            }
+
+            override fun onLoadFailed(errorDrawable: Drawable?) {
+            }
+        })
     }
 }
