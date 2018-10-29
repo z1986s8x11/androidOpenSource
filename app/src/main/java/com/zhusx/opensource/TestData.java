@@ -1,16 +1,21 @@
 package com.zhusx.opensource;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ClipDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
+import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.view.Gravity;
 import android.widget.ProgressBar;
 
+import com.zhusx.core.debug.LogUtil;
 import com.zhusx.core.utils._Views;
+
+import java.util.Set;
 
 /**
  * 测试数据
@@ -33,5 +38,59 @@ public class TestData {
         background.setCornerRadius(_Views.dip2px(1));
         LayerDrawable pd = new LayerDrawable(new Drawable[]{background, progress});
         progressBar.setProgressDrawable(pd);
+    }
+    public static void debug(Intent intent) {
+        StringBuffer sb = new StringBuffer();
+        if (intent != null) {
+            sb.append("Intent data:\n");
+            sb.append(String.format("scheme:[ %s ]", intent.getScheme()));
+            sb.append("\n");
+            sb.append(String.format("uri:[ %s ]", intent.getData()));
+            sb.append("\n");
+            sb.append(String.format("type:[ %s ]", intent.getType()));
+            sb.append("\n");
+            sb.append(String.format("action:[ %s ]", intent.getAction()));
+            sb.append("\n");
+            sb.append(String.format("component:[ %s ]", intent.getComponent()));
+            sb.append("\n");
+            Bundle bundle = intent.getExtras();
+            if (bundle != null) {
+                sb.append("Intent bundle:\n");
+                Set<String> set = bundle.keySet();
+                for (String key : set) {
+                    Object value = bundle.get(key);
+                    if (value == null) {
+                        sb.append(String.format("key:[ %s ]  value:[ %s ]", key, bundle.get(key)));
+                    } else {
+                        sb.append(String.format("key:[ %s ]  type:[ %s ]  value:[ %s ]", key, value.getClass().getName(), value));
+                    }
+                    sb.append("\n");
+                }
+            } else {
+                sb.append("Intent bundle: null");
+            }
+        } else {
+            sb.append("Intent data: null");
+        }
+        LogUtil.e(sb.toString());
+    }
+
+    public static void debug(Bundle bundle) {
+        StringBuffer sb = new StringBuffer();
+        if (bundle != null) {
+            Set<String> set = bundle.keySet();
+            for (String key : set) {
+                Object value = bundle.get(key);
+                if (value == null) {
+                    sb.append(String.format("key:[ %s ]  value:[ %s ]", key, bundle.get(key)));
+                } else {
+                    sb.append(String.format("key:[ %s ]  type:[ %s ]  value:[ %s ]", key, value.getClass().getName(), value));
+                }
+                sb.append("\n");
+            }
+        } else {
+            sb.append("Intent data: null");
+        }
+        LogUtil.e(sb.toString());
     }
 }

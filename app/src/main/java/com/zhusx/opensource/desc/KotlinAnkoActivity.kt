@@ -1,21 +1,66 @@
 package com.zhusx.opensource.desc
 
 import android.os.Bundle
+import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.app.AppCompatActivity
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
+import android.view.Gravity
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
-import com.zhusx.core.manager._SQLManager.debug
+import com.zhusx.core.widget.view._TextView
 import com.zhusx.opensource.MainActivity
 import com.zhusx.opensource.R
 import org.jetbrains.anko.*
+import org.jetbrains.anko.support.v4.UI
+import java.util.*
 
 class KotlinAnkoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_anko)
+        //然后在LayShowActivity调用下面的方法即可实现加载布局
+        CustoomActivityLayoutUI().setContentView(this)
+    }
+
+    //声明一个类继承AnkoComponent，对应泛型类到一个LayShowActivity，然后布局
+    class CustoomActivityLayoutUI : AnkoComponent<KotlinAnkoActivity> {
+        override fun createView(ui: AnkoContext<KotlinAnkoActivity>) = with(ui) {
+            verticalLayout {
+                verticalLayout {
+                    padding = dip(10)
+                    val name = editText("LayoutActyUI") {
+                        id = android.R.id.edit
+                        hint = "测试"
+                    }
+                    button("Say Hello") {
+                        setOnClickListener {
+                            ctx.toast("Hello, ${name.text}!")
+                            name.textColor = 0xffff0000.toInt()
+                        }
+                    }
+                }
+                relativeLayout {
+                    val tv = textView {
+                        id = android.R.id.text1
+                    }.lparams {
+                        width = ViewGroup.LayoutParams.MATCH_PARENT
+                        height = dip(200)
+                        centerInParent()
+                    }
+                    button("change size") {
+                        setOnClickListener {
+                            tv.text = "${Random().nextInt(200) + 100}"
+                            tv.invalidate()
+                        }
+                    }.lparams {
+                        below(tv)
+                        centerHorizontally()
+                    }
+                }
+            }
+        }
     }
 
     fun startActivityDemo() {
@@ -85,28 +130,21 @@ class KotlinAnkoActivity : AppCompatActivity() {
         //id findview
         find<Button>(BTN_ID).setOnClickListener { toast("this is login button") }
     }
+}
 
-
-    //声明一个类继承AnkoComponent，对应泛型类到一个LayShowActivity，然后布局
-    class LayoutActyUI : AnkoComponent<KotlinAnkoActivity> {
-        val ET_ID = 0x1001
-        override fun createView(ui: AnkoContext<KotlinAnkoActivity>) = with(ui) {
+class AnkoFragment : Fragment() {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        return UI {
             verticalLayout {
-                val name = editText("LayoutActyUI") {
-                    id = ET_ID
-                }
-                button("Say Hello") {
-                    setOnClickListener {
-                        ctx.toast("Hello, ${name.text}!")
-                        name.textColor = 0xffff0000.toInt()
-                    }
-                }
+                editText()
+                button("OK")
             }
-        }
+        }.view
     }
 
-    fun add() {
-        //然后在LayShowActivity调用下面的方法即可实现加载布局
-        LayoutActyUI().setContentView(this)
+    companion object {
+        fun newInstance(): AnkoFragment {
+            return AnkoFragment()
+        }
     }
 }

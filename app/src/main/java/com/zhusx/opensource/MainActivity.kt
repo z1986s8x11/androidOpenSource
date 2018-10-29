@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import com.zhusx.core.adapter._BaseRecyclerAdapter
 import com.zhusx.opensource.camera.PictureSelectorActivity
 import com.zhusx.opensource.camera.ZXingActivity
+import com.zhusx.opensource.desc.KotlinAnkoActivity
 import com.zhusx.opensource.image.FrescoPhotoViewActivity
 import com.zhusx.opensource.image.GlideActivity
 import com.zhusx.opensource.image.PhotoViewActivity
@@ -45,7 +46,8 @@ class MainActivity : AppCompatActivity() {
                         PatternLockerActivity::class.java,
                         GlideActivity::class.java,
                         MagicIndicatorActivity::class.java,
-                        SmartRefreshLayoutActivity::class.java
+                        SmartRefreshLayoutActivity::class.java,
+                        KotlinAnkoActivity::class.java
                 )) {
             override fun bindViewHolder(holder: _BaseRecyclerAdapter._ViewHolder, p1: Int, s: Class<out AppCompatActivity>) {
                 holder.run {
