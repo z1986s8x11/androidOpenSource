@@ -44,5 +44,6 @@
         <activity android:name=".image.GlideActivity" />
         <activity android:name=".selector.MagicIndicatorActivity" />
         <activity android:name=".list.SmartRefreshLayoutActivity" />
+        <activity android:name=".desc.KotlinAnkoActivity" />
     </application>
 </manifest>

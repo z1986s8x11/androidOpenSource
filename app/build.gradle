@@ -53,17 +53,28 @@ dependencies {
 
     implementation 'com.android.support:cardview-v7:27.1.1'
     implementation 'com.android.support:gridlayout-v7:27.1.1'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //kotlin 通用库
+    implementation "org.jetbrains.anko:anko-commons:$anko_version"
+    //Anko Layouts
+    implementation "org.jetbrains.anko:anko-sdk25:$anko_version"
+    implementation "org.jetbrains.anko:anko-appcompat-v7:$anko_version"
+
     implementation 'com.zhusx:core:0.8.5'
 
     //下拉刷新
     implementation 'in.srain.cube:ultra-ptr:1.0.11'
+
     //viewpager指示器
     implementation('com.github.JakeWharton:ViewPagerIndicator:2.4.1') {
         exclude group: 'com.android.support'
     }
-    //仿ios联动选择
-    implementation 'com.contrarywind:Android-PickerView:4.1.3'
-    //选择相片
+
+    //仿ios联动选择  https://github.com/Bigkoo/Android-PickerView
+    implementation 'com.contrarywind:Android-PickerView:4.1.6'
+
+    //选择相片  https://github.com/LuckSiege/PictureSelector
     implementation('com.github.LuckSiege.PictureSelector:picture_library:v2.2.3') {
         exclude group: 'com.android.support'
         exclude group: 'io.reactivex.rxjava2'
@@ -71,15 +82,20 @@ dependencies {
         exclude group: 'com.github.bumptech.glide'
         transitive = false
     }
-    //各种进度显示
+
+    //各种进度显示 https://github.com/81813780/AVLoadingIndicatorView
     implementation 'com.wang.avi:library:2.1.3'
+
     //fresco
     implementation "com.facebook.fresco:fresco:1.8.1"
-    //fresco 图片缩放
+
+    //fresco 图片缩放   https://github.com/ongakuer/PhotoDraweeView
     implementation 'me.relex:photodraweeview:1.1.3'
+
     //Glide
-    implementation 'com.github.bumptech.glide:glide:4.6.1'
-    //图片缩放
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+
+    //图片缩放  https://github.com/chrisbanes/PhotoView/tree/master
     implementation('com.github.chrisbanes.photoview:library:1.2.4') {
         exclude group: 'com.android.support'
     }
@@ -92,57 +108,55 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
 
-    //刷新 加载更多RecyclerView
+    //刷新 加载更多RecyclerView  https://github.com/jdsjlzx/LRecyclerView
     implementation 'com.github.jdsjlzx:LRecyclerView:1.5.0'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    //贝塞尔圆点指示器
+    //贝塞尔圆点指示器  https://github.com/yanyiqun001/bannerDot
     implementation('com.github.yanyiqun001:bannerDot:1.0') {
         exclude group: 'com.android.support'
     }
 
-    //进度条
+    //进度条  https://github.com/AnderWeb/discreteSeekBar
     implementation 'org.adw.library:discrete-seekbar:1.0.1'
-    //右测A-Z选择
+
+    //右测A-Z选择  https://github.com/gjiazhe/WaveSideBar
     implementation 'com.gjiazhe:wavesidebar:1.3'
 
-    //二维码
+    //二维码  https://github.com/jenly1314/ZXingLite
     implementation 'com.king.zxing:zxing-lite:1.0.2'
     implementation 'com.google.zxing:core:3.3.3'
 
-    //滚动的数字
+    //滚动的数字 https://github.com/YvesCheung/RollingText
     implementation('com.github.YvesCheung:RollingText:1.2.0') {
         exclude group: 'org.jetbrains.kotlin'
     }
 
-    //图形解锁
+    //图形解锁  https://github.com/ihsg/PatternLocker
     implementation 'com.github.ihsg:PatternLocker:2.1.0'
 
-    //基于ViewPager的Tab选择器
+    //基于ViewPager的Tab选择器  https://github.com/hackware1993/MagicIndicator
     implementation('com.github.hackware1993:MagicIndicator:1.5.0') {
         exclude group: 'com.android.support'
     }
 
-    //https://github.com/r0adkll/Slidr
-    //侧滑关闭Activity
+    //侧滑关闭Activity  https://github.com/r0adkll/Slidr
     implementation('com.r0adkll:slidableactivity:2.0.6') {
         exclude group: 'com.android.support'
     }
 
-    //https://github.com/zyj1609wz/Android-StatusBarColor
-    //沉浸式状态栏
-    //implementation 'com.jaeger.statusbaruitl:library:1.4.0'
+    //沉浸式状态栏  https://github.com/zyj1609wz/Android-StatusBarColor
+    implementation 'com.jaeger.statusbaruitl:library:1.4.0'
 
-    //https://github.com/oubowu/PinnedSectionItemDecoration/blob/master/README-CN.md
-    //RecyclerView 粘性标签库
-    //implementation 'com.oushangfeng:PinnedSectionItemDecoration:1.3.0'
+    //RecyclerView 粘性标签库  https://github.com/oubowu/PinnedSectionItemDecoration/blob/master/README-CN.md
+    implementation 'com.oushangfeng:PinnedSectionItemDecoration:1.3.0'
 
-    //https://github.com/scwang90/SmartRefreshLayout
-    //下拉刷新 加载更多
+    //下拉刷新 加载更多  https://github.com/scwang90/SmartRefreshLayout
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5'
     implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5'
 
-    //https://github.com/CymChad/BaseRecyclerViewAdapterHelper
-    //Adapter的封装
+    //Adapter的封装 https://github.com/CymChad/BaseRecyclerViewAdapterHelper
     //implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.36'
+
+    //EventBus  https://github.com/greenrobot/EventBus
+    implementation 'org.greenrobot:eventbus:3.1.1'
 }
