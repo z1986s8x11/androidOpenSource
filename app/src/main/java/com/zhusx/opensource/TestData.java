@@ -15,6 +15,10 @@ import android.widget.ProgressBar;
 import com.zhusx.core.debug.LogUtil;
 import com.zhusx.core.utils._Views;
 
+import java.net.URI;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -92,5 +96,83 @@ public class TestData {
             sb.append("Intent data: null");
         }
         LogUtil.e(sb.toString());
+    }
+
+    public static String encodeUrl(String url, Map<String, Object> map) {
+        try {
+            URI uri = URI.create(url.trim());
+            String host = uri.getHost();
+            if (host == null) {
+                return url;
+            }
+            if (host.length() == url.length()) {
+                return url;
+            }
+            if (map == null) {
+                map = new HashMap<>();
+            }
+            StringBuffer urlSb = new StringBuffer();
+            if (uri.getScheme() == null) {
+                urlSb.append("http://");
+            } else {
+                urlSb.append(uri.getScheme());
+                urlSb.append("://");
+            }
+            urlSb.append(host);
+            if (uri.getPort() != -1) {
+                urlSb.append(":");
+                urlSb.append(uri.getPort());
+            }
+            String urlPath = uri.getPath();
+            String[] paths = urlPath.split("/");
+            if (paths.length > 0) {
+                for (int i = 0; i < paths.length; i++) {
+                    urlSb.append(URLEncoder.encode(paths[i], "utf-8"));
+                    if (i != paths.length - 1) {
+                        urlSb.append("/");
+                    }
+                }
+            }
+            String paramArray = uri.getQuery();
+            if (paramArray != null) {
+                String[] keyValues = paramArray.split("&");
+                for (int i = 0; i < keyValues.length; i++) {
+                    String[] keyValue = keyValues[i].split("=");
+                    if (!map.containsKey(keyValue[0])) {
+                        if (keyValue.length == 1) {
+                            map.put(keyValue[0], "");
+                        } else {
+                            map.put(keyValue[0], keyValue[1]);
+                        }
+                    }
+                }
+            }
+            if (!map.isEmpty()) {
+                urlSb.append("?");
+                int index = urlSb.length();
+                for (String key : map.keySet()) {
+                    urlSb.append("&");
+                    urlSb.append(URLEncoder.encode(key, "utf-8"));
+                    urlSb.append("=");
+                    if (map.get(key) != null) {
+                        urlSb.append(URLEncoder.encode(String.valueOf(map.get(key)), "utf-8"));
+                    }
+                }
+                urlSb.deleteCharAt(index);
+            }
+            if (uri.getFragment() != null) {
+                urlSb.append("#");
+                urlSb.append(uri.getFragment());
+            }
+            if (url.endsWith("/")) {
+                urlSb.append("/");
+            }
+            return urlSb.toString();
+        } catch (Exception e) {
+            if (LogUtil.DEBUG) {
+                LogUtil.e(e);
+            }
+        }
+        return url;
     }
 }
