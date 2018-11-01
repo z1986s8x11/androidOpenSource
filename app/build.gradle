@@ -159,4 +159,8 @@ dependencies {
 
     //EventBus  https://github.com/greenrobot/EventBus
     implementation 'org.greenrobot:eventbus:3.1.1'
+
+    //FlexBox https://github.com/google/flexbox-layout
+    //implementation 'com.google.android:flexbox:1.1.0'  必须是AndroidX
+    implementation 'com.google.android:flexbox:1.0.0'
 }

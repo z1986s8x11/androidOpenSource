@@ -10,6 +10,7 @@ import com.zhusx.opensource.desc.KotlinAnkoActivity
 import com.zhusx.opensource.image.FrescoPhotoViewActivity
 import com.zhusx.opensource.image.GlideActivity
 import com.zhusx.opensource.image.PhotoViewActivity
+import com.zhusx.opensource.list.FlexboxLayoutActivity
 import com.zhusx.opensource.list.LRecyclerViewActivity
 import com.zhusx.opensource.list.SmartRefreshLayoutActivity
 import com.zhusx.opensource.progress.AVLoadingActivity
@@ -47,7 +48,8 @@ class MainActivity : AppCompatActivity() {
                         GlideActivity::class.java,
                         MagicIndicatorActivity::class.java,
                         SmartRefreshLayoutActivity::class.java,
-                        KotlinAnkoActivity::class.java
+                        KotlinAnkoActivity::class.java,
+                        FlexboxLayoutActivity::class.java
                 )) {
             override fun bindViewHolder(holder: _BaseRecyclerAdapter._ViewHolder, p1: Int, s: Class<out AppCompatActivity>) {
                 holder.run {

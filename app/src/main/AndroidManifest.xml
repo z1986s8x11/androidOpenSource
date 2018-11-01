@@ -45,5 +45,6 @@
         <activity android:name=".selector.MagicIndicatorActivity" />
         <activity android:name=".list.SmartRefreshLayoutActivity" />
         <activity android:name=".desc.KotlinAnkoActivity" />
+        <activity android:name=".list.FlexboxLayoutActivity" />
     </application>
 </manifest>
