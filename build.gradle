@@ -6,8 +6,12 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.1.4'  //360插件化  3.2.1 会报 No signature of method: com.android.build.gradle.internal.scope.VariantScopeImpl.getMergeAssetsTask() is applicable for argument types: () values: []
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        //插件化主工程
+        classpath 'com.qihoo360.replugin:replugin-host-gradle:2.3.0'
+        //插件化插件工程
+        classpath 'com.qihoo360.replugin:replugin-plugin-gradle:2.3.0'
     }
 }
 

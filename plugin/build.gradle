@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.zhusx.replugin"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //kotlin 通用库
+    implementation "org.jetbrains.anko:anko-commons:$anko_version"
+    //Anko Layouts
+    implementation "org.jetbrains.anko:anko-sdk25:$anko_version"
+    implementation "org.jetbrains.anko:anko-appcompat-v7:$anko_version"
+
+    //360 插件工程
+    implementation 'com.qihoo360.replugin:replugin-plugin-lib:2.3.0'
+}
+// 这个不是放在主工程下.....需要放在插件工程下
+// 这个plugin需要放在android配置之后，因为需要读取android中的配置项
+apply plugin: 'replugin-plugin-gradle'
+repluginPluginConfig {
+    //插件名
+    pluginName = "test"
+    //宿主app的包名
+    hostApplicationId = "news.abb.com.plugin"
+    //宿主app的启动activity
+    hostAppLauncherActivity = "news.abb.com.plugin.MainActivity"
+}
