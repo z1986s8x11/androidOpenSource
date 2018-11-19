@@ -24,11 +24,11 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".image.FrescoPhotoViewActivity" />
         <activity android:name=".list.LRecyclerViewActivity" />
@@ -47,12 +47,13 @@
         <activity android:name=".desc.KotlinAnkoActivity" />
         <activity android:name=".list.FlexboxLayoutActivity" />
         <activity android:name=".TestActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity android:name=".plugin.PluginActivity" />
+        <activity android:name=".text.TickerActivity" />
     </application>
 </manifest>

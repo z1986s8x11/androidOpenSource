@@ -19,6 +19,7 @@ import com.zhusx.opensource.selector.DiscreteSeekBarActivity
 import com.zhusx.opensource.selector.MagicIndicatorActivity
 import com.zhusx.opensource.selector.WaveSideBarActivity
 import com.zhusx.opensource.text.RollingTextActivity
+import com.zhusx.opensource.text.TickerActivity
 import com.zhusx.opensource.verify.PatternLockerActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -49,7 +50,8 @@ class MainActivity : AppCompatActivity() {
                         MagicIndicatorActivity::class.java,
                         SmartRefreshLayoutActivity::class.java,
                         KotlinAnkoActivity::class.java,
-                        FlexboxLayoutActivity::class.java
+                        FlexboxLayoutActivity::class.java,
+                        TickerActivity::class.java
                 )) {
             override fun bindViewHolder(holder: _BaseRecyclerAdapter._ViewHolder, p1: Int, s: Class<out AppCompatActivity>) {
                 holder.run {

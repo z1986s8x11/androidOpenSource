@@ -14,6 +14,7 @@ import org.jetbrains.anko.toast
 import java.io.File
 
 /**
+ * https://github.com/Qihoo360/RePlugin/
  * Author  zhusx
  * Email   327270607@qq.com
  * Create  2018/8/14 9:36

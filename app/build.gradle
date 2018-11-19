@@ -184,4 +184,7 @@ dependencies {
 
     //360 RePlugin 插件化  https://github.com/Qihoo360/RePlugin
     implementation 'com.qihoo360.replugin:replugin-host-lib:2.3.0'
+
+    //数字滚动 https://github.com/robinhood/ticker
+    implementation 'com.robinhood.ticker:ticker:2.0.0'
 }
