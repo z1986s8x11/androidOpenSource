@@ -51,6 +51,15 @@ android {
 //        force 'com.android.support:appcompat-v7:23.1.1'
 //    }
 //}
+
+apply plugin: 'replugin-host-gradle'
+repluginHostConfig {
+    useAppCompat = true
+
+    // 可以在这里自定义常驻进程的名字
+    // persistentName = ":XXXXService"
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 //    implementation 'com.android.support:appcompat-v7:27.1.1'
