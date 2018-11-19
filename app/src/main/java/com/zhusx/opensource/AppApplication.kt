@@ -1,9 +1,17 @@
 package com.zhusx.opensource
 
+import android.content.Context
+import android.content.Intent
+import android.os.Environment
+import android.util.Log
 import com.facebook.drawee.backends.pipeline.Fresco
+import com.qihoo360.replugin.RePlugin
 import com.qihoo360.replugin.RePluginApplication
+import com.qihoo360.replugin.RePluginCallbacks
 import com.qihoo360.replugin.RePluginConfig
 import com.zhusx.core.ZsxApplicationManager
+import org.jetbrains.anko.toast
+import java.io.File
 
 /**
  * Author  zhusx
@@ -20,9 +28,36 @@ class AppApplication : RePluginApplication() {
 
     override fun createConfig(): RePluginConfig {
         val c = RePluginConfig()
+        //是否效验签名
         c.verifySign = !BuildConfig.DEBUG
+        //白名单
+        RePlugin.addCertSignature("379C790B7B726B51AC58E8FCBCFEB586")
         c.isMoveFileWhenInstalling = !BuildConfig.DEBUG
         c.isPrintDetailLog = BuildConfig.DEBUG
+        c.callbacks = object : RePluginCallbacks(this) {
+            //在启动插件  么有的时候会回调这个
+            override fun onPluginNotExistsForActivity(context: Context?, plugin: String?, intent: Intent?, process: Int): Boolean {
+                Log.e("====", "plugin:${plugin} intent:${intent}")
+                return super.onPluginNotExistsForActivity(context, plugin, intent, process)
+            }
+        }
         return c
+    }
+
+    fun load(pluginName: String) {
+        if (RePlugin.isPluginRunning(pluginName)) {
+            toast("插件正在运行")
+        } else {
+            toast("插件未运行")
+            val pi = RePlugin.install(File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "6demo1.jar").path)
+            if (pi != null) {
+                RePlugin.preload(pi)
+                toast("加载插件成功")
+                //跳转  如果不存在此插件  会调用 onPluginNotExistsForActivity 方法
+                RePlugin.startActivity(this, RePlugin.createIntent("news.abb.com.plugin", "news.abb.com.plugin.TestPluginActivity"))
+            } else {
+                toast("加载插件失败")
+            }
+        }
     }
 }
