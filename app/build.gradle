@@ -187,4 +187,10 @@ dependencies {
 
     //数字滚动 https://github.com/robinhood/ticker
     implementation 'com.robinhood.ticker:ticker:2.0.0'
+
+    //进度条  https://github.com/WhiteDG/ProgressView
+    implementation 'com.white:progressview:1.0.1'
+
+    //日历控件  https://github.com/huanghaibin-dev/CalendarView
+    implementation 'com.haibin:calendarview:3.5.4'
 }

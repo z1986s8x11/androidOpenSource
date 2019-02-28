@@ -14,10 +14,8 @@ import com.zhusx.opensource.list.FlexboxLayoutActivity
 import com.zhusx.opensource.list.LRecyclerViewActivity
 import com.zhusx.opensource.list.SmartRefreshLayoutActivity
 import com.zhusx.opensource.progress.AVLoadingActivity
-import com.zhusx.opensource.selector.BannerDotActivity
-import com.zhusx.opensource.selector.DiscreteSeekBarActivity
-import com.zhusx.opensource.selector.MagicIndicatorActivity
-import com.zhusx.opensource.selector.WaveSideBarActivity
+import com.zhusx.opensource.progress.WhiteProgressViewActivity
+import com.zhusx.opensource.selector.*
 import com.zhusx.opensource.text.RollingTextActivity
 import com.zhusx.opensource.text.TickerActivity
 import com.zhusx.opensource.verify.PatternLockerActivity
@@ -51,7 +49,9 @@ class MainActivity : AppCompatActivity() {
                         SmartRefreshLayoutActivity::class.java,
                         KotlinAnkoActivity::class.java,
                         FlexboxLayoutActivity::class.java,
-                        TickerActivity::class.java
+                        TickerActivity::class.java,
+                        CalendarViewActivity::class.java,
+                        WhiteProgressViewActivity::class.java
                 )) {
             override fun bindViewHolder(holder: _BaseRecyclerAdapter._ViewHolder, p1: Int, s: Class<out AppCompatActivity>) {
                 holder.run {

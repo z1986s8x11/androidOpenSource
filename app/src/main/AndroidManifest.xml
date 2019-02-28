@@ -55,5 +55,7 @@
         </activity>
         <activity android:name=".plugin.PluginActivity" />
         <activity android:name=".text.TickerActivity" />
+        <activity android:name=".progress.WhiteProgressViewActivity" />
+        <activity android:name=".selector.CalendarViewActivity" />
     </application>
 </manifest>
