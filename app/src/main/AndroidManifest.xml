@@ -58,5 +58,6 @@
         <activity android:name=".text.TickerActivity" />
         <activity android:name=".progress.WhiteProgressViewActivity" />
         <activity android:name=".selector.CalendarViewActivity" />
+        <activity android:name=".camera.MatisseActivity" />
     </application>
 </manifest>

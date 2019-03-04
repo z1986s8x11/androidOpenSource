@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.zhusx.core.adapter._BaseRecyclerAdapter
+import com.zhusx.opensource.camera.MatisseActivity
 import com.zhusx.opensource.camera.PictureSelectorActivity
 import com.zhusx.opensource.camera.ZXingActivity
 import com.zhusx.opensource.desc.KotlinAnkoActivity
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity() {
                         LRecyclerViewActivity::class.java,
                         AVLoadingActivity::class.java,
                         PictureSelectorActivity::class.java,
+                        MatisseActivity::class.java,
                         BannerDotActivity::class.java,
                         DiscreteSeekBarActivity::class.java,
                         WaveSideBarActivity::class.java,
