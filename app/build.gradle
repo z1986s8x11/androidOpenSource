@@ -42,8 +42,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 //configurations.all {
@@ -202,4 +202,8 @@ dependencies {
     implementation('com.haibin:calendarview:3.5.4') {
         exclude group: 'com.android.support'
     }
+
+    //需要设置 java使用 JAVA 8版本 以及 Support Library 26.1.0+
+    def lifecycle_version = "1.1.1"
+    implementation "android.arch.lifecycle:common-java8:$lifecycle_version"
 }

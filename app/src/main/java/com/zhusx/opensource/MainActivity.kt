@@ -1,9 +1,12 @@
 package com.zhusx.opensource
 
+import android.arch.lifecycle.DefaultLifecycleObserver
+import android.arch.lifecycle.LifecycleOwner
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.zhusx.core.adapter._BaseRecyclerAdapter
+import com.zhusx.core.debug.LogUtil
 import com.zhusx.opensource.camera.MatisseActivity
 import com.zhusx.opensource.camera.PictureSelectorActivity
 import com.zhusx.opensource.camera.ZXingActivity
@@ -64,5 +67,30 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        lifecycle.addObserver(object : DefaultLifecycleObserver {
+            override fun onCreate(owner: LifecycleOwner) {
+                LogUtil.e("onCreate:$owner   status:${lifecycle.currentState}")
+            }
+
+            override fun onDestroy(owner: LifecycleOwner) {
+                LogUtil.e("onDestroy:$owner   status:${lifecycle.currentState}")
+            }
+
+            override fun onPause(owner: LifecycleOwner) {
+                LogUtil.e("onPause:$owner   status:${lifecycle.currentState}")
+            }
+
+            override fun onResume(owner: LifecycleOwner) {
+                LogUtil.e("onResume:$owner   status:${lifecycle.currentState}")
+            }
+
+            override fun onStart(owner: LifecycleOwner) {
+                LogUtil.e("onStart:$owner   status:${lifecycle.currentState}")
+            }
+
+            override fun onStop(owner: LifecycleOwner) {
+                LogUtil.e("onStop:$owner   status:${lifecycle.currentState}")
+            }
+        })
     }
 }
