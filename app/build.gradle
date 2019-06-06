@@ -129,7 +129,7 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
 
     //刷新 加载更多RecyclerView  https://github.com/jdsjlzx/LRecyclerView
     implementation 'com.github.jdsjlzx:LRecyclerView:1.5.0'
