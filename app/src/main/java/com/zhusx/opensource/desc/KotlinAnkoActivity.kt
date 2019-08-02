@@ -1,21 +1,14 @@
 package com.zhusx.opensource.desc
 
-import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import com.facebook.drawee.drawable.ScalingUtils
-import com.facebook.drawee.view.SimpleDraweeView
-import com.zhusx.core.widget.view._TextView
 import com.zhusx.opensource.MainActivity
-import com.zhusx.opensource.R
 import org.jetbrains.anko.*
 import org.jetbrains.anko.support.v4.UI
 import java.net.URL
