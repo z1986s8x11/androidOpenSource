@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.scwang.smartrefresh.header.*
 import com.zhusx.core.adapter._BaseRecyclerAdapter
+import com.zhusx.core.adapter._ViewHolder
 import com.zhusx.opensource.R
 import kotlinx.android.synthetic.main.activity_smart_refresh_layout.*
 import java.util.*

@@ -12,6 +12,7 @@ import com.luck.picture.lib.config.PictureMimeType
 import com.luck.picture.lib.entity.LocalMedia
 import com.luck.picture.lib.tools.PictureFileUtils
 import com.zhusx.core.adapter._BaseRecyclerAdapter
+import com.zhusx.core.adapter._ViewHolder
 import com.zhusx.opensource.R
 import kotlinx.android.synthetic.main.activity_picture_selector.*
 
@@ -90,7 +91,7 @@ class PictureSelectorActivity : AppCompatActivity() {
             }.create().show()
         }
         adapter = object : _BaseRecyclerAdapter<LocalMedia>(R.layout.item_image) {
-            override fun bindViewHolder(holder: _BaseRecyclerAdapter._ViewHolder, position: Int, s: LocalMedia?) {
+            override fun bindViewHolder(holder: _ViewHolder, position: Int, s: LocalMedia?) {
                 Glide.with(this@PictureSelectorActivity).load(s?.path).into(holder.getView(R.id.iv_image))
             }
         }

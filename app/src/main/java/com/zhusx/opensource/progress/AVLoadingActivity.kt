@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.wang.avi.AVLoadingIndicatorView
 import com.zhusx.core.adapter._BaseRecyclerAdapter
+import com.zhusx.core.adapter._ViewHolder
 import com.zhusx.core.utils._Toast
 import com.zhusx.opensource.R
 import kotlinx.android.synthetic.main.activity_avloading.*

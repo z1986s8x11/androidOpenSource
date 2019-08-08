@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.zhusx.core.adapter._BaseRecyclerAdapter
+import com.zhusx.core.adapter._ViewHolder
 import com.zhusx.core.debug.LogUtil
 import com.zhusx.opensource.camera.MatisseActivity
 import com.zhusx.opensource.camera.PictureSelectorActivity
@@ -58,7 +59,7 @@ class MainActivity : AppCompatActivity() {
                         CalendarViewActivity::class.java,
                         WhiteProgressViewActivity::class.java
                 )) {
-            override fun bindViewHolder(holder: _BaseRecyclerAdapter._ViewHolder, p1: Int, s: Class<out AppCompatActivity>) {
+            override fun bindViewHolder(holder: _ViewHolder, p1: Int, s: Class<out AppCompatActivity>) {
                 holder.run {
                     setText(android.R.id.text1, s.simpleName)
                     rootView.setOnClickListener {

@@ -17,6 +17,7 @@ import com.zhihu.matisse.MimeType
 import com.zhihu.matisse.engine.ImageEngine
 import com.zhihu.matisse.internal.entity.CaptureStrategy
 import com.zhusx.core.adapter._BaseRecyclerAdapter
+import com.zhusx.core.adapter._ViewHolder
 import com.zhusx.opensource.BuildConfig
 import com.zhusx.opensource.R
 import kotlinx.android.synthetic.main.activity_matisses.*
@@ -73,7 +74,7 @@ class MatisseActivity : AppCompatActivity() {
             }.create().show()
         }
         adapter = object : _BaseRecyclerAdapter<String>(R.layout.item_image) {
-            override fun bindViewHolder(holder: _BaseRecyclerAdapter._ViewHolder, position: Int, s: String?) {
+            override fun bindViewHolder(holder: _ViewHolder, position: Int, s: String?) {
                 Glide.with(this@MatisseActivity).load(s).into(holder.getView(R.id.iv_image))
             }
         }

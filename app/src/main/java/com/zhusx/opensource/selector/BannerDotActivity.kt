@@ -20,9 +20,9 @@ class BannerDotActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_banner_dot)
-        viewPager.adapter = object : _BasePagerAdapter<String>(arrayOf("1", "2", "3", "4", "5", "6", "7", "8").toList()) {
-            override fun getView(p0: LayoutInflater, p1: Int, p2: String?, p3: View?, p4: ViewGroup?): View {
-                return TextView(p0.context).apply { text = p2 }
+        viewPager.adapter = object : _BasePagerAdapter<String>(R.layout.lib_list_item_1, arrayOf("1", "2", "3", "4", "5", "6", "7", "8").toList()) {
+            override fun bindViewHolder(holder: _ViewsHolder, p1: Int, s: String?) {
+                holder.getView<TextView>(android.R.id.text1).text = s
             }
         }
         banner.attachToViewpager(viewPager)

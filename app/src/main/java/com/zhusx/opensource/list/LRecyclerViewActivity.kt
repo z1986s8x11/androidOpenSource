@@ -8,6 +8,7 @@ import com.github.jdsjlzx.ItemDecoration.DividerDecoration
 import com.github.jdsjlzx.recyclerview.LRecyclerViewAdapter
 import com.github.jdsjlzx.recyclerview.ProgressStyle
 import com.zhusx.core.adapter._BaseRecyclerAdapter
+import com.zhusx.core.adapter._ViewHolder
 import com.zhusx.opensource.R
 import kotlinx.android.synthetic.main.activity_lrecyclerview.*
 
@@ -29,7 +30,7 @@ class LRecyclerViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lrecyclerview)
         adapter = object : _BaseRecyclerAdapter<String>(android.R.layout.simple_list_item_1, (0..10).map { "$it" }) {
-            override fun bindViewHolder(holder: _BaseRecyclerAdapter._ViewHolder, p1: Int, s: String?) {
+            override fun bindViewHolder(holder: _ViewHolder, p1: Int, s: String?) {
                 holder.setText(android.R.id.text1, s)
             }
         }

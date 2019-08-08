@@ -4,11 +4,10 @@ import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
+import android.widget.TextView
 import com.zhusx.core.adapter._BasePagerAdapter
 import com.zhusx.opensource.R
 import kotlinx.android.synthetic.main.activity_magicindicator.*
@@ -43,9 +42,9 @@ class MagicIndicatorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_magicindicator)
 
-        viewPager!!.adapter = object : _BasePagerAdapter<String>(mDataList, false) {
-            override fun getView(p0: LayoutInflater, p1: Int, p2: String?, p3: View?, p4: ViewGroup?): View {
-                return p0.inflate(R.layout.lib_list_item_1, p4, false)
+        viewPager!!.adapter = object : _BasePagerAdapter<String>(R.layout.lib_list_item_1, mDataList, false) {
+            override fun bindViewHolder(holder: _ViewsHolder, p1: Int, p2: String?) {
+                holder.getView<TextView>(android.R.id.text1).text = p2
             }
         }
 
