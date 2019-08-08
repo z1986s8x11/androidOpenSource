@@ -54,10 +54,11 @@
                 <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
-        <activity android:name=".plugin.PluginActivity" />
+        <!--<activity android:name=".plugin.PluginActivity" />-->
         <activity android:name=".text.TickerActivity" />
         <activity android:name=".progress.WhiteProgressViewActivity" />
         <activity android:name=".selector.CalendarViewActivity" />
         <activity android:name=".camera.MatisseActivity" />
+        <activity android:name=".image.RoundImageViewActivity" />
     </application>
 </manifest>

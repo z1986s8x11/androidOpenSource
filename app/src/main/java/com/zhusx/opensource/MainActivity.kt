@@ -57,7 +57,8 @@ class MainActivity : AppCompatActivity() {
                         FlexboxLayoutActivity::class.java,
                         TickerActivity::class.java,
                         CalendarViewActivity::class.java,
-                        WhiteProgressViewActivity::class.java
+                        WhiteProgressViewActivity::class.java,
+                        RoundImageViewActivity::class.java
                 )) {
             override fun bindViewHolder(holder: _ViewHolder, p1: Int, s: Class<out AppCompatActivity>) {
                 holder.run {

@@ -62,4 +62,8 @@ dependencies {
 
     //轻量级的ViewPager，仿新版网易云歌单广场 https://github.com/Ifxcyr/LitePager
     implementation 'com.wuyr:litepager:1.2.1'
+
+    //二维码  https://github.com/jenly1314/ZXingLite
+    implementation 'com.king.zxing:zxing-lite:1.1.2-androidx'
+    implementation 'com.google.zxing:core:3.3.3'
 }

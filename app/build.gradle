@@ -119,6 +119,9 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     kapt 'com.github.bumptech.glide:compiler:4.8.0'
 
+    //图片圆角  https://github.com/vinc3m1/RoundedImageView
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
     //图片缩放  https://github.com/chrisbanes/PhotoView/tree/master
     implementation('com.github.chrisbanes.photoview:library:1.2.4') {
         exclude group: 'com.android.support'
