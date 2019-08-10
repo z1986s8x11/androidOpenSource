@@ -8,7 +8,7 @@ package com.zhusx.opensource;
  */
 public class TestData {
     public static String[] Images = new String[]{
-            "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1534404681&di=4cb00a553998a24d0c0d5a30b3844f8f&src=http://lol.91danji.com/UploadFile/20141128/1417165228238101.jpg"
+            "http://img.api.m.lllag.com/images/api/20160810/d7b015c83e2b4570d2f61e14dd537079.jpeg"
     };
 
 

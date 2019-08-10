@@ -3,6 +3,9 @@ package com.zhusx.opensource
 import android.app.Application
 import com.facebook.drawee.backends.pipeline.Fresco
 import com.zhusx.core.ZsxApplicationManager
+import com.zhusx.show.ZsxSourceCodeManager
+import org.jetbrains.anko.toast
+import java.io.File
 
 /**
  * https://github.com/Qihoo360/RePlugin/
@@ -14,6 +17,7 @@ class AppApplication : /*RePluginApplication*/Application() {
     override fun onCreate() {
         super.onCreate()
         ZsxApplicationManager.builder(this).setLogDebug(BuildConfig.DEBUG).build()
+        ZsxSourceCodeManager.builder(this).build()
         //初始化fresco框架
         Fresco.initialize(this)
     }

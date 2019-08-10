@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+//apply plugin: 'zhusx.core'
 
 android {
     compileSdkVersion 27
@@ -80,7 +81,7 @@ dependencies {
     implementation "org.jetbrains.anko:anko-appcompat-v7:$anko_version"
 
     implementation 'com.zhusx:core:0.8.6'
-
+    implementation 'com.zhusx:show:0.8.6'
     //下拉刷新
     implementation 'in.srain.cube:ultra-ptr:1.0.11'
 
