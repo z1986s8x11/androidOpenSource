@@ -15,6 +15,7 @@ import com.zhusx.opensource.desc.KotlinAnkoActivity
 import com.zhusx.opensource.image.FrescoPhotoViewActivity
 import com.zhusx.opensource.image.GlideActivity
 import com.zhusx.opensource.image.PhotoViewActivity
+import com.zhusx.opensource.image.RoundImageViewActivity
 import com.zhusx.opensource.list.FlexboxLayoutActivity
 import com.zhusx.opensource.list.LRecyclerViewActivity
 import com.zhusx.opensource.list.SmartRefreshLayoutActivity
@@ -58,7 +59,8 @@ class MainActivity : AppCompatActivity() {
                         TickerActivity::class.java,
                         CalendarViewActivity::class.java,
                         WhiteProgressViewActivity::class.java,
-                        RoundImageViewActivity::class.java
+                        RoundImageViewActivity::class.java,
+                        MZBannerViewActivity::class.java
                 )) {
             override fun bindViewHolder(holder: _ViewHolder, p1: Int, s: Class<out AppCompatActivity>) {
                 holder.run {

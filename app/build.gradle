@@ -211,4 +211,7 @@ dependencies {
     //需要设置 java使用 JAVA 8版本 以及 Support Library 26.1.0+
     def lifecycle_version = "1.1.1"
     implementation "android.arch.lifecycle:common-java8:$lifecycle_version"
+
+    //仿魅族BannerView,图片轮播控件,支持多种模式切换 https://github.com/pinguo-zhouwei/MZBannerView
+    implementation 'com.github.pinguo-zhouwei:MZBannerView:v2.0.2'
 }
