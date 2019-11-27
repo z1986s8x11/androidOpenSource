@@ -61,5 +61,6 @@
         <activity android:name=".camera.MatisseActivity" />
         <activity android:name=".image.RoundImageViewActivity" />
         <activity android:name=".selector.MZBannerViewActivity" />
+        <activity android:name=".video.GiraffePlayerActivity" />
     </application>
 </manifest>

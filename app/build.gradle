@@ -214,4 +214,7 @@ dependencies {
 
     //仿魅族BannerView,图片轮播控件,支持多种模式切换 https://github.com/pinguo-zhouwei/MZBannerView
     implementation 'com.github.pinguo-zhouwei:MZBannerView:v2.0.2'
+
+    //视频播放 https://github.com/tcking/GiraffePlayer2
+    api 'com.github.tcking:giraffeplayer2:0.1.25'
 }

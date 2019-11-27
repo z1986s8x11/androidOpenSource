@@ -25,6 +25,7 @@ import com.zhusx.opensource.selector.*
 import com.zhusx.opensource.text.RollingTextActivity
 import com.zhusx.opensource.text.TickerActivity
 import com.zhusx.opensource.verify.PatternLockerActivity
+import com.zhusx.opensource.video.GiraffePlayerActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -60,7 +61,8 @@ class MainActivity : AppCompatActivity() {
                         CalendarViewActivity::class.java,
                         WhiteProgressViewActivity::class.java,
                         RoundImageViewActivity::class.java,
-                        MZBannerViewActivity::class.java
+                        MZBannerViewActivity::class.java,
+                        GiraffePlayerActivity::class.java
                 )) {
             override fun bindViewHolder(holder: _ViewHolder, p1: Int, s: Class<out AppCompatActivity>) {
                 holder.run {
